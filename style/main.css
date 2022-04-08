@@ -1,0 +1,194 @@
+:root {
+    --vermelha: #E50914;
+    --preta: #141414;
+    --transition3s: transition: .3s ease all;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/** Elementos base **/
+body {
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: #fff;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    color: var(--vermelha);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #FFF;
+}
+
+/** filme principal **/
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) 100%), url('../images/capa-house.jpg');
+    height: 65vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 90px;
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0, 0, 0, .5);
+    border: none;
+    color: #FFF;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition3s);
+}
+
+.botao:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes {
+    margin-top: 5px;
+}
+
+.item img:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: var(--transition3s);
+}
+
+.spinner-bg,
+.modal-bg {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.d-none{
+    display: none;
+}
+.spinner {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #E50914;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.1);    
+}
+
+.modal iframe {
+    width: 90%;
+    height: 85%;
+    
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    float: left;
+}
+
+
+
+.footer-bottom{
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.1);        
+    z-index: 2000;
+    cursor: pointer; 
+    display: flex;   
+    align-items: center;
+    justify-content: center;        
+}
+.footer-bottom:hover{
+    transition: 4s;
+    background-color: rgba(0, 0, 0, .7);        
+}
+.back{
+    position: relative;
+    top:0;
+    left: 10;
+    padding: 15px 40px;
+    border-radius: 3px;
+    border: 1px solid #a81f26;
+    background-color: #a81f26;
+    color: #FFF;
+    z-index: 200;
+    font-size: 17px;
+}
+.back:hover{
+    cursor: pointer;
+    background-color: #E50914;
+    transition: var(--transition3s);
+}
